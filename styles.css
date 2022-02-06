@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 :root{
-    --paleBlue: hsl(225, 100%, 94%);
+    --paleBlue: rgb(224, 232, 255);
     --brightBlue: hsl(245, 75%, 52%);
     --veryPaleBlue: hsl(225, 100%, 98%);
     --desaturatedBlue: hsl(224, 23%, 55%);
@@ -12,15 +12,19 @@
     box-sizing: border-box;
 }
 body{
+    background-color: var(--paleBlue);
     font-family: 'Red Hat Display', sans-serif;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .main-container{
-    border: 1px solid black;
     width: 328px;
     height: 570px;
-    margin: 70px auto;
+    margin: 140px auto 70px; /* Cambio*/
     border-radius: 8px;
     overflow: hidden;
+    background-color: white;
 }
 .image{
     height: 162px;
@@ -28,38 +32,55 @@ body{
     background-size: cover;
 }
 h1{
+    font-weight: 900;
     text-align: center;
     font-size: 1.4em;
-    margin: 30px 0;
+    margin: 24px 0;
     color: var(--darkBlue);
 }
 .main-paragraph{
     text-align: center;
     color: var(--desaturatedBlue);
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+    padding: 0 30px;
 }
 .plan-container{
+    width: 280px;
+    height: 82px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 auto 32px;
+    border-radius: 8px;
+    background-color: var(--veryPaleBlue);
 }
 .icon-container{
     background-image: url(./images/icon-music.svg);
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
 }
-.payment p:nth-child(1){
+.payment p:nth-child(1){ /* Plan */
     color: var(--darkBlue);
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 0.9em;
 }
-.payment p:nth-child(2){
+.payment p:nth-child(2){ /* Value */
     color: var(--desaturatedBlue);
 }
-.plan-container a{
+.change{ 
     color: var(--brightBlue);
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 30px;
+}
+.change:hover{
+    text-decoration: none;
+    color: var(--desaturatedBlue);
+    cursor: pointer;
 }
 button{
+    display: block;
     margin: 0 auto;
     background-color: var(--brightBlue);
     border: none;
@@ -67,16 +88,61 @@ button{
     width: 280px;
     height: 53px;
     border-radius: 8px;
+    font-weight: 900;
+    font-size: 0.9em;
+    margin-bottom: 18px;
+    box-shadow: 1px 10px 8px 3px var(--paleBlue);
 }
-
-
-
-
+button:hover{
+    background-color: var(--desaturatedBlue);
+    cursor: pointer;
+}
+.cancel-container{
+    text-align: center;
+}
+.cancel{
+    text-decoration: none;
+    color: var(--desaturatedBlue);
+    font-size: 0.9em;
+    font-weight: 900;
+}
+.cancel:hover{
+    color: var(--darkBlue);
+}
 .attribution { 
     font-size: 11px; 
     text-align: center; 
 }
 .attribution a { 
-    
     color: hsl(228, 45%, 44%); 
+}
+@media (min-width:944px){
+    body{
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+    .main-container{
+        width: 408px;
+        height: 632px;
+        margin-bottom: 50px;
+    }
+    h1{
+        margin: 48px 0 24px;
+    }
+    .main-paragraph{
+        padding: 0 50px;
+        margin-bottom: 20px;
+    }
+    .plan-container{
+        width: 316px;
+        height: 91px;
+        padding: 0 10px;
+        margin: 0 auto 28px;
+    }
+    .change{ 
+        margin-left: 60px;
+    }
+    button{
+        width: 316px;
+        margin-bottom: 32px;
+    }
 }
