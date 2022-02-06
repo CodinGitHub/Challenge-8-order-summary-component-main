@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://coding-tube.com)
+- Solution URL: [Add solution URL here](https://github.com/CodinGitHub/Challenge-8-order-summary-component-main)
+- Live Site URL: [Add live site URL here](https://challenge-8-order-summary-component-main.vercel.app/)
 
 ## My process
 
